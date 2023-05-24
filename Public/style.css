@@ -40,7 +40,7 @@ header h1{
 }
 
 .principalContent {
-  max-width: 40vw;
+  max-width: 45vw;
   margin: auto;
 }
 
@@ -107,26 +107,30 @@ header h1{
 
 /* -------------------------------------------------------------------- TIMER SECTION START ------------------------------------------------------------------------ */
 .timer__sections {
-  padding: 14px;
+  margin-top: 8px;
   display: flex;
   justify-content: space-around;
 }
 
 .breaks {
   border: none;
-  border-radius: 6px;
-  font-size: 24px;
-  padding: 11px 17px 38px 27px;
+  margin: 0px;
+  border-radius: 4px;
+  font-size: 17px;
+  padding: 4px 14px;
   height: 35px;
-  margin-top: 8px;
   cursor: pointer;
-  background-color: rgb(31, 31, 31);
+  background: none rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   color: white;
-  font-weight: 500;
+  opacity: 1;
+  font-weight: bold;
   letter-spacing: 1.2px;
   transition: all ease-in-out .1s;
 }
-
+.breaks span{
+  text-align: center;
+}
 .breaks:hover {
   background-color: #272647;
 }
@@ -146,8 +150,8 @@ header h1{
 .startButton {
   border: none;
   border-radius: 6px;
-  padding: 51px 24px;;
-  height: 10vh;
+  padding: 40px 24px;;
+  height: 0vh;
   cursor: pointer;
   background: rgba(15, 11, 11, 0.65);
   color: white;
@@ -155,7 +159,7 @@ header h1{
   margin-top: 20px;
   display: flex;
   align-items: center;
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: 1px;
   margin-bottom: 2.4rem;
   transition: ease-out 0.3s;
