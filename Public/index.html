@@ -4,62 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-   
+    <!--------------------------------------------------------- TIMER POMODORO SECCTION  --------------------------------------------------------------->
+      <header>
+        <h1 class="header__title">MarvoFocus</h1>
+      </header>
 
-      <!--------------------------------------------------------- TIMER POMODORO SECCTION  --------------------------------------------------------------->
-      <div class="content">
-        <header>
-            <h1 class="header__title">MarvoFocus</h1>
-        </header>
-      </div>
-     
-      <!-- <section class="balls">
-        <div class="blue-ball"></div>
-        <div class="purple-ball"></div>
-        <div class="cyan-ball"></div>
-      </section> -->
+    <!-- <section class="balls">
+          <div class="blue-ball"></div>
+          <div class="purple-ball"></div>
+          <div class="cyan-ball"></div>
+        </section> -->
 
-        <main>
-      <section class="timer">
+    <section class="principalContent">
+      <div class="timer">
         <div class="timer__sections">
-            <button class="breaks">Pomodoro</button>
-            <button class="breaks">Short Break</button>
-            <button class="breaks">Long Break</button>
-          </div>
-
-          <section class="clock">
-            <div class="timerMinutes">25:00</div>
-            <button class="startButton">START</button>
-          </section>
-          
-
-        <p class="timer__description">Time to focus!</p>
-        <div class="timer__container">
+          <button id="Pomodoro" class="breaks">Pomodoro</button>
+          <button id="ShortBreak" class="breaks">Short Break</button>
+          <button id="LongBreak" class="breaks">Long Break</button>
         </div>
 
-      </section>
-
-
-      <!--------------------------------------------------------- INFO POMODORO SECCTION  --------------------------------------------------------------->
-      <!-- <section class="info">
-        <h2 class="info__title">Haz más en menos tiempo: descubre la eficacia del temporizador Pomodoro en línea de MarvoFocus para maximizar tu productividad</h2>
-        
-        <div class="pomodoro__info">
-            <p>¿Qué es la Técnica Pomodoro?</p>
-            <span>
-                La Técnica Pomodoro es un método de gestión del tiempo que consiste en trabajar en bloques de tiempo, llamados "pomodoros", seguidos de pausas cortas. Cada pomodoro tiene una duración de 25 minutos y se centra en una tarea específica sin interrupciones. Después de cada pomodoro, se toma una pausa breve de unos 5 minutos, y después de completar varios pomodoros, se toma una pausa más larga de 15 minutos. Este enfoque ayuda a mejorar la concentración, reducir la procrastinación y aumentar la productividad. La Técnica Pomodoro se ha demostrado efectiva para optimizar el tiempo y lograr un equilibrio entre el trabajo y el descanso.
-            </span>
+        <div class="clock">
+          <div class="timerMinutes">25:00</div>
+          <button class="startButton">START</button>
         </div>
+        <p class="pFocus" style="display: none;">Time to focus! &#129504;</p>
+      </div>
+      <div class="sphere"></div>
+      <div class="sphere2"></div>
+      <div class="sphere3"></div>
+      <div class="sphere4"></div>
+    </section>
 
-      </section> -->
-    </main>
-  
+    <!--------------------------------------------------------- INFO POMODORO SECCTION  --------------------------------------------------------------->
+    <!-- <section class="info">
+      <h2 class="info__title">Haz más en menos tiempo: descubre la eficacia del temporizador Pomodoro en línea de MarvoFocus para maximizar tu productividad</h2>
       
+      <div class="pomodoro__info">
+          <p>¿Qué es la Técnica Pomodoro?</p>
+          <span>
+              La Técnica Pomodoro es un método de gestión del tiempo que consiste en trabajar en bloques de tiempo, llamados "pomodoros", seguidos de pausas cortas. Cada pomodoro tiene una duración de 25 minutos y se centra en una tarea específica sin interrupciones. Después de cada pomodoro, se toma una pausa breve de unos 5 minutos, y después de completar varios pomodoros, se toma una pausa más larga de 15 minutos. Este enfoque ayuda a mejorar la concentración, reducir la procrastinación y aumentar la productividad. La Técnica Pomodoro se ha demostrado efectiva para optimizar el tiempo y lograr un equilibrio entre el trabajo y el descanso.
+          </span>
+      </div>
 
-    </footer>
+    </section> -->
+
+    
   </body>
+  <script src="app.js"></script>
 </html>
