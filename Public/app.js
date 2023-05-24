@@ -1,7 +1,7 @@
 const minutes = document.querySelector('.timerMinutes');
 const btnsBreaks = document.querySelectorAll('.breaks');
 const startTimer = document.querySelector('.startButton');
-const pFocus = document.querySelector('.pFocus');
+const pFocus = document.getElementById('pFocus');
 
 const times = {
   Pomodoro: '25:00',
@@ -9,15 +9,13 @@ const times = {
   ShortBreak: '05:00'
 };
 
-let intervalId;
+let intervalId; // Almacenar el identificador del intervalo de tiempo que se este ejecutando
 let timeInSeconds;
-let intervalFocus
 btnsBreaks.forEach((button) => {
     button.addEventListener('click', () => {
         const time = times[button.id];
         if (time) {
             minutes.innerHTML = time;
-            timeInSeconds = convertToSeconds(time);
             clearInterval(intervalId);
             intervalId = null;
         }
@@ -25,22 +23,23 @@ btnsBreaks.forEach((button) => {
 });
 
 startTimer.addEventListener('click', () => {
-    if (intervalId) {
-        return;
-    }
-    const intervalFocus = setInterval(() => {
+
+  // Mensaje time to focus
+    const timeToFocus = setInterval(() => {
         pFocus.style.display = 'block';
       }, 2000);
       
       setTimeout(() => {
-        clearInterval(intervalFocus);
-      }, 10000);
+        clearInterval(timeToFocus);
+        pFocus.style.display = 'none';
+      }, 5000);
 
   timeInSeconds = convertToSeconds(minutes.innerHTML);
 
+
   intervalId = setInterval(() => {
-    const minutesRemaining = Math.floor(timeInSeconds / 60);
-    const secondsRemaining = timeInSeconds % 60;
+    const minutesRemaining = Math.floor(timeInSeconds / 60); 
+    const secondsRemaining = timeInSeconds - (minutesRemaining * 60);
 
     const formattedMinutes = String(minutesRemaining).padStart(2, '0');
     const formattedSeconds = String(secondsRemaining).padStart(2, '0');
@@ -58,6 +57,9 @@ startTimer.addEventListener('click', () => {
 });
 
 function convertToSeconds(time) {
-  const [minutes, seconds] = time.split(':');
-  return parseInt(minutes) * 60 + parseInt(seconds);
+  const minutes = parseInt(time.split(':')[0]);
+  const seconds = parseInt(time.split(':')[1]);
+  return minutes * 60 + seconds;
 }
+
+
